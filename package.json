@@ -1,6 +1,6 @@
 {
   "name": "yodlr-pulse",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Simple node health monitoring via statsd",
   "main": "index.js",
   "scripts": {
@@ -16,6 +16,5 @@
     "url": "https://github.com/yodlr/pulse/issues"
   },
   "homepage": "https://github.com/yodlr/pulse",
-  "dependencies": {
-  }
+  "dependencies": {}
 }
