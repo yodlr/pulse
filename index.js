@@ -10,13 +10,13 @@ var Pulse = module.exports = function pulse(metric) {
 Pulse.prototype._measureLoop = function _measureLoop() {
   var p = this;
   blocked(function blockHandler(ms) {
-    p._metric.count('health.blocked', ms);
+    p._metric.count('health.loop.blocked', ms);
   });
 
   memory(function memHandler(heapUsed, rss) {
-    p._metric.gauge('health.heapUsed', heapUsed);
-    p._metric.gauge('health.rss', rss);
-    p._metric.gauge('health.uptime', process.uptime());
+    p._metric.gauge('health.memory.heapUsed', heapUsed);
+    p._metric.gauge('health.memory.rss', rss);
+    p._metric.gauge('health.process.uptime', process.uptime());
   })
 }
 
@@ -31,10 +31,7 @@ var blocked = function(fn) {
     var n = ms - interval;
     if (n > 10) {
       fn(Math.round(n))
-      console.log(Math.round(n));
     }
-
-    //fn(Math.round(n))
     start = process.hrtime();
   }, interval).unref();
 };
