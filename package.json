@@ -1,0 +1,21 @@
+{
+  "name": "yodlr-pulse",
+  "version": "1.0.0",
+  "description": "Simple node health monitoring via statsd",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/yodlr/pulse.git"
+  },
+  "author": "Ross Kukulinski <ross@getyodlr.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/yodlr/pulse/issues"
+  },
+  "homepage": "https://github.com/yodlr/pulse",
+  "dependencies": {
+  }
+}
