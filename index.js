@@ -9,6 +9,7 @@ var Pulse = module.exports = function pulse(metric) {
 
 Pulse.prototype._measureLoop = function _measureLoop() {
   var p = this;
+  p._metric.count('health.loop.blocked', 0);
   blocked(function blockHandler(ms) {
     p._metric.count('health.loop.blocked', ms);
   });
