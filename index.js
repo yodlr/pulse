@@ -43,5 +43,5 @@ var memory = function(fn) {
   setInterval(function() {
     var mem = process.memoryUsage();
     fn(mem.heapUsed, mem.rss);
-  })
+  }, interval).unref();
 }
